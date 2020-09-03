@@ -2,6 +2,10 @@ const Product = require('../database/models/product-model');
 const constants = require('../constants');
 const { formatMongoDBData, checkObjectId } = require('../helper/db-helper');
 
+/**
+ * Create new Product information.
+ * @param {*} data Product information to be save in the database.
+ */
 module.exports.create = async (data) => {
     try {
         let product = new Product({ ...data });
