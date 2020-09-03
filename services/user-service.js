@@ -4,6 +4,10 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const { formatMongoDBData } = require('../helper/db-helper');
 
+/**
+ * Sign up.
+ * @param {*} credential New credential to be save in the database.
+ */
 module.exports.signup = async ({ email, password }) => {
     try {
         const user = await User.findOne({ email: email });
