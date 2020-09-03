@@ -28,6 +28,10 @@ module.exports.signup = async ({ email, password }) => {
     }
 }
 
+/**
+ * Sign up.
+ * @param {*} credential Credential to be use when logging in.
+ */
 module.exports.login = async ({ email, password }) => {
     try {
         const user = await User.findOne({ email });
