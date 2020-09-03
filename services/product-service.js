@@ -36,6 +36,10 @@ module.exports.get = async ({ skip = 0, limit = 10 }) => {
     }
 }
 
+/**
+ * Get production information by id.
+ * @param {id} id Product id to search. 
+ */
 module.exports.getById = async ({ id }) => {
     try {
         checkObjectId(id);
