@@ -18,6 +18,11 @@ module.exports.create = async (data) => {
     }
 }
 
+/**
+ * Get list of products.
+ * @param {*} skip Current page to display from the list of record.
+ * @param {*} limit How many records shoud retrieve.
+ */
 module.exports.get = async ({ skip = 0, limit = 10 }) => {
     try {
         const products = await Product.find({})
