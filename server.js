@@ -29,7 +29,7 @@ if (process.env.NODE_ENV != 'production') {
 }
 
 app.get('/', (req, res, next) => {
-    res.send('Hello from the node server');
+    res.send('Sample NodeJS API is running...');
 });
 
 const PORT = process.env.PORT || 3000;
