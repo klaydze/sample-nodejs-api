@@ -24,12 +24,13 @@ app.use('/api/v1/product', require('./routes/product-routes'));
 app.use('/api/v1/user', require('./routes/user-routes'));
 
 // API Documentation
+const currentEnv = process.env.NODE_ENV;
 if (process.env.NODE_ENV != 'production') {
     app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 }
 
 app.get('/', (req, res, next) => {
-    res.send('Sample NodeJS API is running...');
+    res.send(`Sample NodeJS API ${currentEnv} is running...`);
 });
 
 const PORT = process.env.PORT || 3000;
